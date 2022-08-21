@@ -1,0 +1,335 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Path Finder &mdash; Practice</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+	<script defer src="https://pyscript.net/latest/pyscript.js"></script>
+	<py-env>
+		- requests
+		- cv2
+		- pytesseract
+	</py-env> -->
+
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="" />
+	<meta property="og:image" content="" />
+	<meta property="og:url" content="" />
+	<meta property="og:site_name" content="" />
+	<meta property="og:description" content="" />
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,700" rel="stylesheet">
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="css/flexslider.css">
+	<!-- Flaticons  -->
+	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="shortcut icon" type="image/png" href="images/images.png" />
+
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+
+	<div class="ftco-loader"></div>
+
+	<div id="page">
+		<nav class="ftco-nav" role="navigation">
+			<div class="top-menu">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-2">
+							<div id="ftco-logo"><a href="index.html">Path Finder</a></div>
+						</div>
+						<div class="col-md-10 text-right menu-1">
+							<ul>
+								<li><a href="index.html">Home</a></li>
+								<li><a href="struggling.html">Struggling</a></li>
+								<li class="active"><a href="practice.html">Practice</a></li>
+								<li><a href="statistics.html">Statistics</a></li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</nav>
+
+		<aside id="ftco-hero" class="js-fullheight">
+			<div class="flexslider js-fullheight">
+				<ul class="slides">
+					<li style="background-image: url(images/practice.png);">
+						<div class="overlay-gradient"></div>
+						<div class="container">
+							<div class="row">
+								<div class="col-md-8 col-md-offset-2 text-center js-fullheight slider-text">
+									<div class="slider-text-inner">
+										<h1><strong>Need More Practice?</strong></h1>
+										<h2>Upload an Image and Find Practice Problems</h2>
+										<input type="file" id="upload-button" accept="image/*">
+										<label for="upload-button">
+											<a class="btn btn-primary btn-lg btn-learn" id="upload-button"
+												alt="placeholder image goes here">Upload Image</a> &nbsp;
+										</label> <br>
+										<figure class="image-container">
+											<img id="chosen-image" alt="">
+											<figcaption id="file-name"></figcaption>
+										</figure>
+
+										<!-- Future Python Script 
+										<py-script>
+											import requests
+
+
+											def ocr_space_file(OCR.py, overlay=True, api_key='K82341706788957',
+											language='eng'):
+											""" OCR.space API request with local file.
+											Python3.5 - not tested on 2.7
+											:param filename: Your file path & name.
+											:param overlay: Is OCR.space overlay required in your response.
+											Defaults to False.
+											:param api_key: OCR.space API key.
+											Defaults to 'helloworld'.
+											:param language: Language code to be used in OCR.
+											List of available language codes can be found on https://ocr.space/OCRAPI
+											Defaults to 'en'.
+											:return: Result in JSON format.
+											"""
+
+											payload = {'isOverlayRequired': overlay,
+											'apikey': api_key,
+											'language': language,
+											}
+											with open(filename, 'rb') as f:
+											r = requests.post('https://api.ocr.space/parse/image',
+											files={filename: f},
+											data=payload,
+											)
+											return r.content.decode()
+
+
+											def ocr_space_url(url, overlay=False, api_key='helloworld', language='eng'):
+											""" OCR.space API request with remote file.
+											Python3.5 - not tested on 2.7
+											:param url: Image url.
+											:param overlay: Is OCR.space overlay required in your response.
+											Defaults to False.
+											:param api_key: OCR.space API key.
+											Defaults to 'helloworld'.
+											:param language: Language code to be used in OCR.
+											List of available language codes can be found on https://ocr.space/OCRAPI
+											Defaults to 'en'.
+											:return: Result in JSON format.
+											"""
+
+											payload = {'url': url,
+											'isOverlayRequired': overlay,
+											'apikey': api_key,
+											'language': language,
+											}
+											r = requests.post('https://api.ocr.space/parse/image',
+											data=payload,
+											)
+											return r.content.decode()
+
+
+											# Use examples:
+											test_file = ocr_space_file(filename='example_image.png', language='pol')
+											test_url = ocr_space_url(url='http://i.imgur.com/31d5L5y.jpg')
+										</py-script> -->
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</aside>
+
+		</section>
+		<footer id="ftco-footer" role="contentinfo">
+			<div class="container">
+				<div class="row row-pb-md">
+					<div class="col-md-4 ftco-widget">
+						<h4>Path Finder</h4>
+						<p>Using OCR to help students learn.</p>
+					</div>
+					<div class="col-md-4 col-md-push-1">
+						<h4>Navigation</h4>
+						<ul class="ftco-footer-links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="struggling.html">Struggling</a></li>
+							<li><a href="practice.html">Practice</a></li>
+							<li><a href="statistics.html">Statistics</a></li>
+						</ul>
+					</div>
+
+					<div class="col-md-4 col-md-push-1">
+						<h4>TEAM</h4>
+						<p>Ibrahim Khan <br> Yahya Hasan <br> Anish Sajja</p>
+					</div>
+
+
+				</div>
+		</footer>
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Stellar Parallax -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- Flexslider -->
+	<script src="js/jquery.flexslider-min.js"></script>
+	<!-- countTo -->
+	<script src="js/jquery.countTo.js"></script>
+	<!-- Magnific Popup -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/magnific-popup-options.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'UA-23581568-13');
+	</script>
+
+	<script>
+		function testSubmitFunction() {
+
+			var a = document.getElementById("biologicalsexstatus");
+			var textOne = a.options[a.selectedIndex].text;
+			if (textOne == "*Choose Location*") {
+				document.getElementById("htmlRandomNumber").textContent = "Your form is incomplete. Please fill out all fields before submitting.";
+				document.getElementById("hometown").style.display = "block";
+				document.getElementById("imagetown").style.display = "none";
+				document.getElementById("mapAppear").style.display = "none";
+			} else if (textOne == "Hurricane Douglas") {
+				document.getElementById("hometown").style.display = "none";
+				document.getElementById("imagetown1").style.display = "block";
+				document.getElementById("mapAppear").style.display = "none";
+			} else if (textOne == "Hurricane Hanna") {
+
+				document.getElementById("hometown").style.display = "block";
+				document.getElementById("imagetown1").style.display = "none";
+				document.getElementById("mapAppear").style.display = "none";
+			} else if (textOne == "Hurricane Gonzalez") {
+				document.getElementById("hometown").style.display = "none";
+				document.getElementById("imagetown1").style.display = "none";
+				document.getElementById("mapAppear").style.display = "block";
+
+			} else if (textOne == "Houston, TX") {
+				document.getElementById("htmlRandomNumber").textContent = "We are still waiting to receive information from this city.";
+				document.getElementById("hometown").style.display = "block";
+				document.getElementById("imagetown").style.display = "none";
+				document.getElementById("mapAppear").style.display = "none";
+
+			}
+
+
+
+
+
+		}
+
+	</script>
+
+	<script>
+
+
+		function durham() {
+
+			if (document.getElementById("hometown").style.display == "block") {
+				document.getElementById("hometown").style.display = "none";
+				document.getElementById("mapAppear").style.display = "none";
+				document.getElementById("imagetown1").style.display = "none";
+			} else {
+				document.getElementById("hometown").style.display = "block";
+				document.getElementById("mapAppear").style.display = "none";
+				document.getElementById("imagetown1").style.display = "none";
+
+			}
+
+		}
+
+		function slc() {
+
+			if (document.getElementById("mapAppear").style.display == "block") {
+				document.getElementById("hometown").style.display = "none";
+				document.getElementById("mapAppear").style.display = "none";
+				document.getElementById("imagetown1").style.display = "none";
+			} else {
+				document.getElementById("mapAppear").style.display = "block";
+				document.getElementById("hometown").style.display = "none";
+				document.getElementById("imagetown1").style.display = "none";
+
+			}
+		}
+
+		function orlando() {
+
+			if (document.getElementById("imagetown1").style.display == "block") {
+				document.getElementById("mapAppear").style.display = "none";
+				document.getElementById("hometown").style.display = "none";
+				document.getElementById("imagetown1").style.display = "none";
+
+
+			} else {
+				document.getElementById("hometown").style.display = "block";
+				document.getElementById("mapAppear").style.display = "none";
+				document.getElementById("hometown").style.display = "none";
+				document.getElementById("imagetown1").style.display = "block";
+			}
+		}
+
+	</script>
+
+</body>
+
+</html>
